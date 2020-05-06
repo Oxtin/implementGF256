@@ -10,6 +10,10 @@ uint8_t expTable[256];
 
 uint8_t logTable[256];
 
+uint8_t add(uint8_t a, uint8_t b) {
+	return a ^ b;
+}
+
 uint8_t mul(uint8_t a, uint8_t b) {
 	uint8_t res = 0;
 
@@ -57,6 +61,7 @@ int main() {
 
 	uint8_t p1, p2;
 	scanf("%hhu%hhu", &p1, &p2);
+	printf("add: %hhu\n", add(p1, p2));
 	printf("multiple directly: %hhu\n", mul(p1, p2));
 	printf("multiple by looking up the table: %hhu\n", mulByTable(p1, p2));
 
