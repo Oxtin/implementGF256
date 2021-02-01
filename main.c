@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include "function.h"
 
 // Operate polynomial under GF(2^8).
@@ -64,6 +65,8 @@ int main() {
 	}
 	printf("The inverse of p1 (mod x^8 + x^4 + x^3 + x + 1): %s\n", inverseP1);
 	printf("The inverse of p2 (mod x^8 + x^4 + x^3 + x + 1): %s\n", inverseP2);
+
+	free(P1), free(P2), free(addition), free(multiple), free(devision), free(modulo), free(inverseP1), free(inverseP2);
 
 /*
 // check the inverse function
